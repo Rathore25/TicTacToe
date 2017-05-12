@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rathore25.tictactoe.MainActivity">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:text="Player 1, select your hero"
+        android:id="@+id/MainMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/MainMessage"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.192"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="0">
+
+            <ImageButton
+                android:id="@+id/hero00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:onClick="SelectHero"
+                app:srcCompat="@drawable/img_player_batman" />
+
+            <ImageButton
+                android:id="@+id/hero01"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:onClick="SelectHero"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_player_superman" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="1">
+
+            <ImageButton
+                android:id="@+id/hero10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:onClick="SelectHero"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_player_ironman" />
+
+            <ImageButton
+                android:id="@+id/hero11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:onClick="SelectHero"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_player_captainamerica" />
+        </LinearLayout>
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>

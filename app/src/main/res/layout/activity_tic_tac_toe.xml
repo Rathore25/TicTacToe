@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rathore25.tictactoe.TicTacToe"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/gridLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_column="0"
+            android:layout_row="0">
+            <ImageButton
+                android:id="@+id/grid00"
+                android:tag="00"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid01"
+                android:tag="01"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid02"
+                android:tag="02"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0">
+            <ImageButton
+                android:id="@+id/grid10"
+                android:tag="10"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid11"
+                android:tag="11"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid12"
+                android:tag="12"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0">
+            <ImageButton
+                android:id="@+id/grid20"
+                android:tag="20"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid21"
+                android:tag="21"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+
+            <ImageButton
+                android:id="@+id/grid22"
+                android:tag="22"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="OnBoxSelect"
+                app:srcCompat="@drawable/img_blank" />
+        </LinearLayout>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/statusView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:text="Player 1's turn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/statusView"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageButton
+            android:id="@+id/player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_player_batman" />
+
+        <ImageButton
+            android:id="@+id/player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_player_superman" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
